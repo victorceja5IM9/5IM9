@@ -8,84 +8,82 @@ public class LlavesDes {
 
     Scanner vicas = new Scanner(System.in);
     String clave = "0001001100110100010101110111100110011011101111001101111111110001";
-    char no1 = clave.charAt(56), no2 = clave.charAt(48), no3 = clave.charAt(40), no4 = clave.charAt(32), no5 = clave.charAt(24), no6 = clave.charAt(16), no7 = clave.charAt(8), no8 = clave.charAt(0);
-    char no9 = clave.charAt(57), no10 = clave.charAt(49), no11 = clave.charAt(41), no12 = clave.charAt(33), no13 = clave.charAt(25), no14 = clave.charAt(17), no15 = clave.charAt(9), no16 = clave.charAt(1);
-    char no17 = clave.charAt(58), no18 = clave.charAt(50), no19 = clave.charAt(42), no20 = clave.charAt(34), no21 = clave.charAt(26), no22 = clave.charAt(18), no23 = clave.charAt(10);
-    char no24 = clave.charAt(2), no25 = clave.charAt(59), no26 = clave.charAt(51), no27 = clave.charAt(43), no28 = clave.charAt(35), no29 = clave.charAt(62);
-    char no30 = clave.charAt(54), no31 = clave.charAt(46), no32 = clave.charAt(38), no33 = clave.charAt(30);
-    char no34 = clave.charAt(22), no35 = clave.charAt(14), no36 = clave.charAt(6), no37 = clave.charAt(61), no38 = clave.charAt(53), no39 = clave.charAt(45);
-    char no40 = clave.charAt(37), no41 = clave.charAt(29), no42 = clave.charAt(21), no43 = clave.charAt(13), no44 = clave.charAt(5), no45 = clave.charAt(60);
-    char no46 = clave.charAt(52), no47 = clave.charAt(44), no48 = clave.charAt(36), no49 = clave.charAt(28), no50 = clave.charAt(20), no51 = clave.charAt(12);
-    char no52 = clave.charAt(4), no53 = clave.charAt(27), no54 = clave.charAt(19), no55 = clave.charAt(11), no56 = clave.charAt(3);
-    /*char no57=clave.charAt(56),no58=clave.charAt(57),no59=clave.charAt(58),no60=clave.charAt(59),no61=clave.charAt(60);
-    char no62=clave.charAt(61),no63=clave.charAt(62),no64=clave.charAt(63);*/
-    char permutadoUno[] = new char[56];
+    char no1 = clave.charAt(56), no2 = clave.charAt(48), no3 = clave.charAt(40), no4 = clave.charAt(32), no5 = clave.charAt(24), no6 = clave.charAt(16), no7 = clave.charAt(8), no8 = clave.charAt(0),
+     no9 = clave.charAt(57), no10 = clave.charAt(49), no11 = clave.charAt(41), no12 = clave.charAt(33), no13 = clave.charAt(25), no14 = clave.charAt(17), no15 = clave.charAt(9), no16 = clave.charAt(1),
+     no17 = clave.charAt(58), no18 = clave.charAt(50), no19 = clave.charAt(42), no20 = clave.charAt(34), no21 = clave.charAt(26), no22 = clave.charAt(18), no23 = clave.charAt(10),
+     no24 = clave.charAt(2), no25 = clave.charAt(59), no26 = clave.charAt(51), no27 = clave.charAt(43), no28 = clave.charAt(35), no29 = clave.charAt(62),
+     no30 = clave.charAt(54), no31 = clave.charAt(46), no32 = clave.charAt(38), no33 = clave.charAt(30),
+     no34 = clave.charAt(22), no35 = clave.charAt(14), no36 = clave.charAt(6), no37 = clave.charAt(61), no38 = clave.charAt(53), no39 = clave.charAt(45),
+     no40 = clave.charAt(37), no41 = clave.charAt(29), no42 = clave.charAt(21), no43 = clave.charAt(13), no44 = clave.charAt(5), no45 = clave.charAt(60),
+     no46 = clave.charAt(52), no47 = clave.charAt(44), no48 = clave.charAt(36), no49 = clave.charAt(28), no50 = clave.charAt(20), no51 = clave.charAt(12),
+     no52 = clave.charAt(4), no53 = clave.charAt(27), no54 = clave.charAt(19), no55 = clave.charAt(11), no56 = clave.charAt(3),
+     permutado[] = new char[56];
     String k1 = "", k2 = "", k3 = "", k4 = "", k5 = "", k6 = "", k7 = "", k8 = "", k9 = "", k10 = "", k11 = "", k12 = "", k13 = "", k14 = "", k15 = "", k16 = "";
 
     public String[] dividirYObtenerC0D0() {
-        permutadoUno[0] = no1;
-        permutadoUno[19] = no20;
-        permutadoUno[38] = no39;
-        permutadoUno[1] = no2;
-        permutadoUno[20] = no21;
-        permutadoUno[39] = no40;
-        permutadoUno[2] = no3;
-        permutadoUno[21] = no22;
-        permutadoUno[40] = no41;
-        permutadoUno[3] = no4;
-        permutadoUno[22] = no23;
-        permutadoUno[41] = no42;
-        permutadoUno[4] = no5;
-        permutadoUno[23] = no24;
-        permutadoUno[42] = no43;
-        permutadoUno[5] = no6;
-        permutadoUno[24] = no25;
-        permutadoUno[43] = no44;
-        permutadoUno[6] = no7;
-        permutadoUno[25] = no26;
-        permutadoUno[44] = no45;
-        permutadoUno[7] = no8;
-        permutadoUno[26] = no27;
-        permutadoUno[45] = no46;
-        permutadoUno[8] = no9;
-        permutadoUno[27] = no28;
-        permutadoUno[46] = no47;
-        permutadoUno[9] = no10;
-        permutadoUno[28] = no29;
-        permutadoUno[47] = no48;
-        permutadoUno[10] = no11;
-        permutadoUno[29] = no30;
-        permutadoUno[48] = no49;
-        permutadoUno[11] = no12;
-        permutadoUno[30] = no31;
-        permutadoUno[49] = no50;
-        permutadoUno[12] = no13;
-        permutadoUno[31] = no32;
-        permutadoUno[50] = no51;
-        permutadoUno[13] = no14;
-        permutadoUno[32] = no33;
-        permutadoUno[51] = no52;
-        permutadoUno[14] = no15;
-        permutadoUno[33] = no34;
-        permutadoUno[52] = no53;
-        permutadoUno[15] = no16;
-        permutadoUno[34] = no35;
-        permutadoUno[53] = no54;
-        permutadoUno[16] = no17;
-        permutadoUno[35] = no36;
-        permutadoUno[54] = no55;
-        permutadoUno[17] = no18;
-        permutadoUno[36] = no37;
-        permutadoUno[55] = no56;
-        permutadoUno[18] = no19;
-        permutadoUno[37] = no38;
+        permutado[0] = no1;
+        permutado[19] = no20;
+        permutado[38] = no39;
+        permutado[1] = no2;
+        permutado[20] = no21;
+        permutado[39] = no40;
+        permutado[2] = no3;
+        permutado[21] = no22;
+        permutado[40] = no41;
+        permutado[3] = no4;
+        permutado[22] = no23;
+        permutado[41] = no42;
+        permutado[4] = no5;
+        permutado[23] = no24;
+        permutado[42] = no43;
+        permutado[5] = no6;
+        permutado[24] = no25;
+        permutado[43] = no44;
+        permutado[6] = no7;
+        permutado[25] = no26;
+        permutado[44] = no45;
+        permutado[7] = no8;
+        permutado[26] = no27;
+        permutado[45] = no46;
+        permutado[8] = no9;
+        permutado[27] = no28;
+        permutado[46] = no47;
+        permutado[9] = no10;
+        permutado[28] = no29;
+        permutado[47] = no48;
+        permutado[10] = no11;
+        permutado[29] = no30;
+        permutado[48] = no49;
+        permutado[11] = no12;
+        permutado[30] = no31;
+        permutado[49] = no50;
+        permutado[12] = no13;
+        permutado[31] = no32;
+        permutado[50] = no51;
+        permutado[13] = no14;
+        permutado[32] = no33;
+        permutado[51] = no52;
+        permutado[14] = no15;
+        permutado[33] = no34;
+        permutado[52] = no53;
+        permutado[15] = no16;
+        permutado[34] = no35;
+        permutado[53] = no54;
+        permutado[16] = no17;
+        permutado[35] = no36;
+        permutado[54] = no55;
+        permutado[17] = no18;
+        permutado[36] = no37;
+        permutado[55] = no56;
+        permutado[18] = no19;
+        permutado[37] = no38;
         String c0 = "";
         String d0 = "";
         for (int i = 0; i < 28; i++) {
-            c0 = c0 + permutadoUno[i];
+            c0 = c0 + permutado[i];
         }
         for (int i = 28; i < 56; i++) {
-            d0 = d0 + permutadoUno[i];
+            d0 = d0 + permutado[i];
         }
         String D1 = "", D2 = "", D3 = "", D4 = "", D5 = "", D6 = "", D7 = "", D8 = "", D9 = "", D10 = "", D11 = "", D12 = "", D13 = "", D14 = "", D15 = "", D16 = "";
         String C1 = "", C2 = "", C3 = "", C4 = "", C5 = "", C6 = "", C7 = "", C8 = "", C9 = "", C10 = "", C11 = "", C12 = "", C13 = "", C14 = "", C15 = "", C16 = "";
@@ -107,39 +105,53 @@ public class LlavesDes {
             }
             if (j == 0) {
                 C1 = lleno;
-            } else if (j == 1) {
+            } else 
+				if (j == 1) {
                 C2 = lleno;
-            } else if (j == 3) {
+            } else 
+				if (j == 3) {
                 C3 = lleno;
-            } else if (j == 5) {
+            } else 
+				if (j == 5) {
                 C4 = lleno;
-            } else if (j == 7) {
+            } else 
+				if (j == 7) {
                 C5 = lleno;
-            } else if (j == 9) {
+            } else 
+				if (j == 9) {
                 C6 = lleno;
-            } else if (j == 11) {
+            } else 
+				if (j == 11) {
                 C7 = lleno;
-            } else if (j == 13) {
+            } else 
+				if (j == 13) {
                 C8 = lleno;
-            } else if (j == 14) {
+            } else 
+				if (j == 14) {
                 C9 = lleno;
-            } else if (j == 16) {
+            } else 
+				if (j == 16) {
                 C10 = lleno;
-            } else if (j == 18) {
+            } else 
+				if (j == 18) {
                 C11 = lleno;
-            } else if (j == 20) {
+            } else 
+				if (j == 20) {
                 C12 = lleno;
-            } else if (j == 22) {
+            } else 
+				if (j == 22) {
                 C13 = lleno;
-            } else if (j == 24) {
+            } else 
+				if (j == 24) {
                 C14 = lleno;
-            } else if (j == 26) {
+            } else 
+				if (j == 26) {
                 C15 = lleno;
-            } else if (j == 27) {
+            } else 
+				if (j == 27) {
                 C16 = lleno;
             }
         }
-        //Para D0
         for (int j = 0; j < c0.length(); j++) {
             if (j == 0) {
                 cs = d0.toCharArray();
@@ -154,35 +166,50 @@ public class LlavesDes {
             }
             if (j == 0) {
                 D1 = lleno;
-            } else if (j == 1) {
+            } else 
+				if (j == 1) {
                 D2 = lleno;
-            } else if (j == 3) {
+            } else 
+				if (j == 3) {
                 D3 = lleno;
-            } else if (j == 5) {
+            } else 
+				if (j == 5) {
                 D4 = lleno;
-            } else if (j == 7) {
+            } else 
+				if (j == 7) {
                 D5 = lleno;
-            } else if (j == 9) {
+            } else 
+				if (j == 9) {
                 D6 = lleno;
-            } else if (j == 11) {
+            } else 
+				if (j == 11) {
                 D7 = lleno;
-            } else if (j == 13) {
+            } else 
+				if (j == 13) {
                 D8 = lleno;
-            } else if (j == 14) {
+            } else 
+				if (j == 14) {
                 D9 = lleno;
-            } else if (j == 16) {
+            } else 
+				if (j == 16) {
                 D10 = lleno;
-            } else if (j == 18) {
+            } else 
+				if (j == 18) {
                 D11 = lleno;
-            } else if (j == 20) {
+            } else 
+				if (j == 20) {
                 D12 = lleno;
-            } else if (j == 22) {
+            } else 
+				if (j == 22) {
                 D13 = lleno;
-            } else if (j == 24) {
+            } else 
+				if (j == 24) {
                 D14 = lleno;
-            } else if (j == 26) {
+            } else 
+				if (j == 26) {
                 D15 = lleno;
-            } else if (j == 27) {
+            } else 
+				if (j == 27) {
                 D16 = lleno;
             }
         }
@@ -304,31 +331,31 @@ public class LlavesDes {
                 + key13.charAt(33) + key13.charAt(52) + key13.charAt(45) + key13.charAt(41) + key13.charAt(49) + key13.charAt(35) + key13.charAt(28) + key13.charAt(31);
                 
 
-        k14 = ""
-                + key14.charAt(13) + key14.charAt(16) + key14.charAt(10) + key14.charAt(23) + key14.charAt(0) + key14.charAt(4) + key14.charAt(2) + key14.charAt(27)
+        k14 = "" + key14.charAt(13) + key14.charAt(16) + key14.charAt(10) + key14.charAt(23) + key14.charAt(0) + key14.charAt(4) + key14.charAt(2) + key14.charAt(27)
                 + key14.charAt(14) + key14.charAt(5) + key14.charAt(20) + key14.charAt(9) + key14.charAt(22) + key14.charAt(18) + key14.charAt(11) + key14.charAt(3)
                 + key14.charAt(25) + key14.charAt(7) + key14.charAt(15) + key14.charAt(6) + key14.charAt(26) + key14.charAt(19) + key14.charAt(12) + key14.charAt(1)
                 + key14.charAt(40) + key14.charAt(51) + key14.charAt(30) + key14.charAt(36) + key14.charAt(46) + key14.charAt(54) + key14.charAt(29) + key14.charAt(39)
                 + key14.charAt(50) + key14.charAt(44) + key14.charAt(32) + key14.charAt(47) + key14.charAt(43) + key14.charAt(48) + key14.charAt(38) + key14.charAt(55)
                 + key14.charAt(33) + key14.charAt(52) + key14.charAt(45) + key14.charAt(41) + key14.charAt(49) + key14.charAt(35) + key14.charAt(28) + key14.charAt(31);
+               
 
-        k15 = ""
-                + key15.charAt(13) + key15.charAt(16) + key15.charAt(10) + key15.charAt(23) + key15.charAt(0) + key15.charAt(4) + key15.charAt(2) + key15.charAt(27)
+        k15 = ""+ key15.charAt(13) + key15.charAt(16) + key15.charAt(10) + key15.charAt(23) + key15.charAt(0) + key15.charAt(4) + key15.charAt(2) + key15.charAt(27)
                 + key15.charAt(14) + key15.charAt(5) + key15.charAt(20) + key15.charAt(9) + key15.charAt(22) + key15.charAt(18) + key15.charAt(11) + key15.charAt(3)
                 + key15.charAt(25) + key15.charAt(7) + key15.charAt(15) + key15.charAt(6) + key15.charAt(26) + key15.charAt(19) + key15.charAt(12) + key15.charAt(1)
                 + key15.charAt(40) + key15.charAt(51) + key15.charAt(30) + key15.charAt(36) + key15.charAt(46) + key15.charAt(54) + key15.charAt(29) + key15.charAt(39)
                 + key15.charAt(50) + key15.charAt(44) + key15.charAt(32) + key15.charAt(47) + key15.charAt(43) + key15.charAt(48) + key15.charAt(38) + key15.charAt(55)
                 + key15.charAt(33) + key15.charAt(52) + key15.charAt(45) + key15.charAt(41) + key15.charAt(49) + key15.charAt(35) + key15.charAt(28) + key15.charAt(31);
+                
 
-        k16 = ""
-                + key16.charAt(13) + key16.charAt(16) + key16.charAt(10) + key16.charAt(23) + key16.charAt(0) + key16.charAt(4) + key16.charAt(2) + key16.charAt(27)
+        k16 = "" + key16.charAt(13) + key16.charAt(16) + key16.charAt(10) + key16.charAt(23) + key16.charAt(0) + key16.charAt(4) + key16.charAt(2) + key16.charAt(27)
                 + key16.charAt(14) + key16.charAt(5) + key16.charAt(20) + key16.charAt(9) + key16.charAt(22) + key16.charAt(18) + key16.charAt(11) + key16.charAt(3)
                 + key16.charAt(25) + key16.charAt(7) + key16.charAt(15) + key16.charAt(6) + key16.charAt(26) + key16.charAt(19) + key16.charAt(12) + key16.charAt(1)
                 + key16.charAt(40) + key16.charAt(51) + key16.charAt(30) + key16.charAt(36) + key16.charAt(46) + key16.charAt(54) + key16.charAt(29) + key16.charAt(39)
                 + key16.charAt(50) + key16.charAt(44) + key16.charAt(32) + key16.charAt(47) + key16.charAt(43) + key16.charAt(48) + key16.charAt(38) + key16.charAt(55)
                 + key16.charAt(33) + key16.charAt(52) + key16.charAt(45) + key16.charAt(41) + key16.charAt(49) + key16.charAt(35) + key16.charAt(28) + key16.charAt(31);
+               
 
-        String[] claves = {k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16};
+        String[] claves = {k1	, k2	, k3	, k4	, k5	, k6	, k7	, k8	, k9	, k10	, k11	, k12	, k13	, k14	, k15	, k16	};
         return claves;
     }
 }
