@@ -1,33 +1,36 @@
+/**
+ *
+ * @author Vicas Ceja
+ */
 import java.util.*;
 public class Des {
     public static void main(String[] args) {
-        ArrayList<String> claves = new ArrayList<String>();
+        ArrayList<String> keys = new ArrayList<String>();
         String E0;
         LlavesDes obt=new LlavesDes();
         devolverClave clav=new devolverClave();
         obt.dividirYObtenerC0D0();
-        claves.add(obt.k1);claves.add(obt.k2);claves.add(obt.k3);claves.add(obt.k4);
-        claves.add(obt.k5);claves.add(obt.k6);claves.add(obt.k7);
-        claves.add(obt.k8);claves.add(obt.k9);claves.add(obt.k10);
-        claves.add(obt.k11);claves.add(obt.k12);claves.add(obt.k13);
-        claves.add(obt.k14);claves.add(obt.k15);claves.add(obt.k16);
+        keys.add(obt.k1);keys.add(obt.k2);keys.add(obt.k3);keys.add(obt.k4);
+        keys.add(obt.k5);keys.add(obt.k6);keys.add(obt.k7);keys.add(obt.k8);
+        keys.add(obt.k9);keys.add(obt.k10);keys.add(obt.k11);keys.add(obt.k12);
+        keys.add(obt.k13);keys.add(obt.k14);keys.add(obt.k15);keys.add(obt.k16);
         clav.devolverClave();
-        String ip="";
+        String ayudita="";
         String L0="",R0="",AuxL0="",AuxR0="";
         for (int j = 0; j < 16; j++) {
             if(j==0){
-                ip=clav.clav2;
+                ayudita=clav.clav2;
             }
             else{
-                ip=L0+R0;
+                ayudita=L0+R0;
             }
             for (int i = 0; i < 32; i++) {
-                AuxL0=AuxL0+ip.charAt(i);
+                AuxL0=AuxL0+ayudita.charAt(i);
             }
             L0=AuxL0;
             AuxL0="";
             for (int i = 32; i < 64; i++) {
-                AuxR0=AuxR0+ip.charAt(i);
+                AuxR0=AuxR0+ayudita.charAt(i);
             }
             R0=AuxR0;
             AuxR0="";
@@ -44,12 +47,12 @@ public class Des {
             String f="";
             int b=0;
             String XOR="";
-            String obtener_claves="";
+            String obtener_keys="";
             for (int i = 0; i < E0.length(); i++) {
                 f= E0.charAt(i)+"";  
-                obtener_claves= claves.get(j).charAt(i)+""; 
+                obtener_keys= keys.get(j).charAt(i)+""; 
                 a=Integer.parseInt(f);
-                b=Integer.parseInt(obtener_claves);
+                b=Integer.parseInt(obtener_keys);
                 XOR=XOR+(a^b);
             }
             String S1,S2,S3,S4,S5,S6,S7,S8;
@@ -89,17 +92,17 @@ public class Des {
             R0=XorHecho2;
             
         }
-        String concatenado=R0+L0;
+        String unir=R0+L0;
         String cifrado="";
         cifrado=""+
-                concatenado.charAt(39)+concatenado.charAt(7)+concatenado.charAt(47)+concatenado.charAt(15)+concatenado.charAt(55)+concatenado.charAt(23)+concatenado.charAt(63)+concatenado.charAt(31)+
-                concatenado.charAt(38)+concatenado.charAt(6)+concatenado.charAt(46)+concatenado.charAt(14)+concatenado.charAt(54)+concatenado.charAt(22)+concatenado.charAt(62)+concatenado.charAt(30)+
-                concatenado.charAt(37)+concatenado.charAt(5)+concatenado.charAt(45)+concatenado.charAt(13)+concatenado.charAt(53)+concatenado.charAt(21)+concatenado.charAt(61)+concatenado.charAt(29)+
-                concatenado.charAt(36)+concatenado.charAt(4)+concatenado.charAt(44)+concatenado.charAt(12)+concatenado.charAt(52)+concatenado.charAt(20)+concatenado.charAt(60)+concatenado.charAt(28)+
-                concatenado.charAt(35)+concatenado.charAt(3)+concatenado.charAt(43)+concatenado.charAt(11)+concatenado.charAt(51)+concatenado.charAt(19)+concatenado.charAt(59)+concatenado.charAt(27)+
-                concatenado.charAt(34)+concatenado.charAt(2)+concatenado.charAt(42)+concatenado.charAt(10)+concatenado.charAt(50)+concatenado.charAt(18)+concatenado.charAt(58)+concatenado.charAt(26)+
-                concatenado.charAt(33)+concatenado.charAt(1)+concatenado.charAt(41)+concatenado.charAt(9)+concatenado.charAt(49)+concatenado.charAt(17)+concatenado.charAt(57)+concatenado.charAt(25)+
-                concatenado.charAt(32)+concatenado.charAt(0)+concatenado.charAt(40)+concatenado.charAt(8)+concatenado.charAt(48)+concatenado.charAt(16)+concatenado.charAt(56)+concatenado.charAt(24);
+                unir.charAt(39)+unir.charAt(7)+unir.charAt(47)+unir.charAt(15)+unir.charAt(55)+unir.charAt(23)+unir.charAt(63)+unir.charAt(31)+
+                unir.charAt(38)+unir.charAt(6)+unir.charAt(46)+unir.charAt(14)+unir.charAt(54)+unir.charAt(22)+unir.charAt(62)+unir.charAt(30)+
+                unir.charAt(37)+unir.charAt(5)+unir.charAt(45)+unir.charAt(13)+unir.charAt(53)+unir.charAt(21)+unir.charAt(61)+unir.charAt(29)+
+                unir.charAt(36)+unir.charAt(4)+unir.charAt(44)+unir.charAt(12)+unir.charAt(52)+unir.charAt(20)+unir.charAt(60)+unir.charAt(28)+
+                unir.charAt(35)+unir.charAt(3)+unir.charAt(43)+unir.charAt(11)+unir.charAt(51)+unir.charAt(19)+unir.charAt(59)+unir.charAt(27)+
+                unir.charAt(34)+unir.charAt(2)+unir.charAt(42)+unir.charAt(10)+unir.charAt(50)+unir.charAt(18)+unir.charAt(58)+unir.charAt(26)+
+                unir.charAt(33)+unir.charAt(1)+unir.charAt(41)+unir.charAt(9)+unir.charAt(49)+unir.charAt(17)+unir.charAt(57)+unir.charAt(25)+
+                unir.charAt(32)+unir.charAt(0)+unir.charAt(40)+unir.charAt(8)+unir.charAt(48)+unir.charAt(16)+unir.charAt(56)+unir.charAt(24);
         
         System.out.println("La clave cifrada es: "+cifrado );
     } 
